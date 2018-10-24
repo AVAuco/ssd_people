@@ -1,19 +1,75 @@
 SSD-based upper-body and head detectors
-=======================================
-Pablo Medina-Suarez and Manuel J. Marin-Jimenez
+======
+<img src="sample_detections.jpg" alt="Image showing upper-body detections"\>
+
+By Pablo Medina-Suarez and Manuel J. Marin-Jimenez.
+
+This repository contains two MatConvNet models for people detection in images: an upper-body detector, and a head detector. These models are based on the Single Shot Multibox Detector (SSD), as described in:
+
+```
+SSD: Single Shot MultiBox Detector
+Authors: Liu, Wei; Anguelov, Dragomir; Erhan, Dumitru; Szegedy, Christian; Reed, Scott; Fu, Cheng-Yang; Berg, Alexander C. 
+Available at [https://arxiv.org/abs/1512.02325]
+```
+
+Both models have been trained on the Hollywood Heads Dataset, using the [MatConvNet implementation of SSD](https://github.com/albanie/mcnSSD) developed by Samuel Albanie.
 
 Quick start
------------
+------
+Demo code is provided in (ssd_people_demo.m). Running this script will perform detections over 3 sample images using the selected model, showing the results in screen.
 
-Start Matlab and setup Matconvnet with contrib modules:  
-
+To run this script, start MATLAB and setup MatConvNet with contrib modules:
 ```matlab
-vl_contrib('setup', 'mcnSSD')  
-vl_contrib('setup', 'mcnExtraLayers')  
-vl_contrib('setup', 'mcnDatasets')  
+% Add MatConvNet to MATLAB's PATH:
+addpath /usr/local/matconvnet-25/matlab     % Adapt this path to your setup
+vl_setupnn
 
-cd <root_ava_ssd_detector>  
-addpath(genpath(pwd))   % Just in case  
-  
-ssd_people_demo;  
+% Setup mcnSSD and its dependencies
+vl_contrib('setup', 'mcnSSD')
+
+% Setup ssd_people
+cd <root_ssd_people>  
+addpath(genpath(pwd))   % Just in case
+
+% Run demo code on CPU
+ssd_people_demo;    % Runs the upper-body detector
+ssd_people_demo('model','head');    % Runs the head detector
 ```
+
+Software requirements
+------
+Minimal requirements to run the models on the CPU:
+- MATLAB (tested on R2016b and R2017a).
+    - Demo code requires Parallel Computing, Computer Vision System and Image Processing toolboxes.
+- [MatConvNet](http://www.vlfeat.org/matconvnet/) (version >= 1.0-beta25 is recommended because of `vl_contrib`).
+- [mcnSSD](https://github.com/albanie/mcnSSD).
+    - [autoNN](https://github.com/vlfeat/autonn).
+    - [mcnExtraLayers](https://github.com/albanie/mcnExtraLayers).
+
+The following code installs mcnSSD and its dependencies via `vl_contrib`:
+```matlab
+vl_contrib('install', 'mcnSSD');
+vl_contrib('compile', 'mcnSSD');
+vl_contrib('setup', 'mcnSSD');
+
+vl_contrib('install','autonn');
+vl_contrib('setup','autonn');
+
+vl_contrib('install','mcnExtraLayers');
+vl_contrib('setup','mcnExtraLayers');
+```
+
+Additional, recommended requirements to run the detectors on the GPU:
+- NVIDIA CUDA Toolkit (tested on v8.0 GA2, v9.2 and v10.0).
+- **Optional:** a NVIDIA cuDNN version matching the NVIDIA CUDA Toolkit version installed.
+
+Performance
+------
+Both the upper-body and head detectors use a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing close to real time detections.
+
+Credits
+------
+We thank the authors of the images used in the demo code, which are licensed under a [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) license:
+- (data/mounted_police.jpg), by [FaceMePLS](https://www.flickr.com/people/faceme/).
+- (data/people_drinking.jpg), by [Ross Broadstock](https://www.flickr.com/people/figurepainting/).
+- (data/rugby_players.jpg), by [jam_90s](https://www.flickr.com/people/zerospin/).
