@@ -18,7 +18,7 @@ Both models have been trained on the Hollywood Heads Dataset, using the [MatConv
 
 Quick start
 ------
-Demo code is provided in (ssd_people_demo.m). Running this script will perform detections over 3 sample images using the selected model, showing the results in screen.
+Demo code is provided in [ssd_people_demo.m](./ssd_people_demo.m). Running this script will perform detections over 3 sample images using the selected model, showing the results in screen.
 
 To run this script, start MATLAB and setup MatConvNet with contrib modules:
 ```matlab
