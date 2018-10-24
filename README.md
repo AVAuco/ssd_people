@@ -1,6 +1,6 @@
 SSD-based upper-body and head detectors
 ======
-[Image showing upper-body detections](./sample_detections.jpg)
+![Image showing upper-body detections](./sample_detections.jpg)
 
 By Pablo Medina-Suarez and Manuel J. Marin-Jimenez.
 
