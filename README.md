@@ -7,12 +7,11 @@ SSD-based upper-body and head detectors
 
 By Pablo Medina-Suarez and Manuel J. Marin-Jimenez.
 
-This repository contains two MatConvNet models for people detection in images: an upper-body detector, and a head detector. These models are based on the Single Shot Multibox Detector (SSD), as described in:
+This repository contains two MatConvNet models for people detection in images: an upper-body detector, and a head detector. These models are based on the [Single Shot Multibox Detector (SSD)](https://arxiv.org/abs/1512.02325), as described in:
 
 ```
 SSD: Single Shot MultiBox Detector
 Authors: Liu, Wei; Anguelov, Dragomir; Erhan, Dumitru; Szegedy, Christian; Reed, Scott; Fu, Cheng-Yang; Berg, Alexander C. 
-Available at (https://arxiv.org/abs/1512.02325).
 ```
 
 Both models have been trained on the Hollywood Heads Dataset, using the [MatConvNet implementation of SSD](https://github.com/albanie/mcnSSD) developed by Samuel Albanie.
