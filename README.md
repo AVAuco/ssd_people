@@ -1,6 +1,9 @@
 SSD-based upper-body and head detectors
 ======
-![Image showing upper-body detections](./sample_detections.jpg)
+
+<div align="center">
+    <img src="./sample_detections.jpg" alt="Image showing upper-body detections" width="276" height="377">
+</div>
 
 By Pablo Medina-Suarez and Manuel J. Marin-Jimenez.
 
