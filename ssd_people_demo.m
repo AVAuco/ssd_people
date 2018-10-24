@@ -12,14 +12,24 @@ function ssd_people_demo(varargin)
 %   values are 'upperbody' and 'head'.
 %
 %   'confThr':: 0.3
-%   Minimum confidence score between 0 and 1.. Detections below this value 
+%   Minimum confidence score between 0 and 1. Detections below this value 
 %   will be filtered out.
 %
 % Example:
 %   - ssd_people_demo('gpu',1) -> runs the upperbody detector using
 % the GPU available at index 1.
 %   - ssd_people_demo('model','head') -> runs the head detector on the CPU.
-%   
+%
+%% Setup dependencies
+% Setup matconvnet
+% Note that you must add matconvnet's code to your PATH before running this
+% code. Example:
+%addpath /usr/local/matconvnet-25/matlab;
+run vl_setupnn;
+% Setup mcnSSD
+vl_contrib('setup','mcnSSD');
+
+%% Parameters
 opts.gpu = [];
 opts.model = 'upperbody';
 % opts.model = 'head';
@@ -37,7 +47,7 @@ images = {
 modelPath = sprintf('models/%s-detector.mat', opts.model);
 net = Net(load(modelPath));
 
-% Get predictions for each test image
+%% Get predictions for each test image
 for i=1:length(images)
     % Read image and resize it to network's input size
     im = single(imread(images{i}));
