@@ -1,6 +1,6 @@
 SSD-based upper-body and head detectors
 ======
-<img src="sample_detections.jpg" alt="Image showing upper-body detections"\>
+[Image showing upper-body detections](./sample_detections.jpg)
 
 By Pablo Medina-Suarez and Manuel J. Marin-Jimenez.
 
@@ -9,7 +9,7 @@ This repository contains two MatConvNet models for people detection in images: a
 ```
 SSD: Single Shot MultiBox Detector
 Authors: Liu, Wei; Anguelov, Dragomir; Erhan, Dumitru; Szegedy, Christian; Reed, Scott; Fu, Cheng-Yang; Berg, Alexander C. 
-Available at [https://arxiv.org/abs/1512.02325]
+Available at (https://arxiv.org/abs/1512.02325).
 ```
 
 Both models have been trained on the Hollywood Heads Dataset, using the [MatConvNet implementation of SSD](https://github.com/albanie/mcnSSD) developed by Samuel Albanie.
@@ -70,6 +70,6 @@ Both the upper-body and head detectors use a 512x512 input size, favoring precis
 Credits
 ------
 We thank the authors of the images used in the demo code, which are licensed under a [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) license:
-- (data/mounted_police.jpg), by [FaceMePLS](https://www.flickr.com/people/faceme/).
-- (data/people_drinking.jpg), by [Ross Broadstock](https://www.flickr.com/people/figurepainting/).
-- (data/rugby_players.jpg), by [jam_90s](https://www.flickr.com/people/zerospin/).
+- [mounted_police.jpg](./data/mounted_police.jpg), by [FaceMePLS](https://www.flickr.com/people/faceme/).
+- [people_drinking.jpg](./data/people_drinking.jpg), by [Ross Broadstock](https://www.flickr.com/people/figurepainting/).
+- [rugby_players.jpg](./data/rugby_players.jpg), by [jam_90s](https://www.flickr.com/people/zerospin/).
