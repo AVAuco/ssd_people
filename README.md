@@ -18,6 +18,25 @@ Both models have been trained on the Hollywood Heads Dataset, using the [MatConv
 
 Quick start
 ------
+## Cloning the repository
+In order to download the models provided in this repository you **must** install [git](https://git-scm.com/) and [git-lfs](https://git-lfs.github.com/).
+
+To do so, run the following commands in command line interface:
+```bash
+Install git: 	 
+	sudo apt-get install git
+Install git-lfs:
+	sudo apt-get install git-lfs
+Set up git-lfs:
+	git lfs install
+Clone ssd_people from GitHub using the method of your choice: 
+	git clone https://github.com/AVAuco/ssd_people.git (HTTPS)
+	git clone git@github.com:AVAuco/ssd_people.git (SSH)
+```
+
+You can verify the installation by checking that the file size of the files under the `models` directory is approximately 90 MB.
+
+## Running the demo code
 Demo code is provided in [ssd_people_demo.m](./ssd_people_demo.m). Running this script will perform detections over 3 sample images using the selected model, showing the results in screen.
 
 To run this script, start MATLAB and setup MatConvNet with contrib modules:
@@ -67,7 +86,7 @@ Additional, recommended requirements to run the detectors on the GPU:
 
 Performance
 ------
-Both the upper-body and head detectors use a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing close to real time detections.
+Both the upper-body and head detectors use a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing real time detections.
 
 Credits
 ------
