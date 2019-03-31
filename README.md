@@ -86,6 +86,18 @@ Performance
 ------
 Both the upper-body and head detectors use a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing real time detections.
 
+Citation
+------
+If you find useful these detectors, please, consider citing the following paper:
+```
+@inproceedings{marin19cvpr,
+  author    = {Mar\'in-Jim\'enez, Manuel J. and Kalogeiton, Vicky and Medina-Su\'arez, Pablo and and Zisserman, Andrew},
+  title     = {{LAEO-Net}: revisiting people {Looking At Each Other} in videos},
+  booktitle = CVPR,
+  year      = {2019},
+}
+```
+
 Credits
 ------
 We thank the authors of the images used in the demo code, which are licensed under a [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) license:
