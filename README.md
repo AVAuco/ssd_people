@@ -98,7 +98,7 @@ If you find useful these detectors, please, consider citing the following paper:
 }
 ```
 
-Credits
+Acknowledgements
 ------
 We thank the authors of the images used in the demo code, which are licensed under a [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) license:
 - [mounted_police.jpg](./data/mounted_police.jpg), by [FaceMePLS](https://www.flickr.com/people/faceme/).
