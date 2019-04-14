@@ -89,10 +89,10 @@ Both the upper-body and head detectors have a 512x512 input size, favoring preci
 ### Qualitative results
 We show some results of both the head (left) and upper-body detectors (right) on the [UCO-LAEO dataset](https://github.com/AVAuco/ucolaeodb) in the following videos:
 <div align="center">
-    <a href="https://youtu.be/0BxqcK0RMIM" alt="Head detections demo video">
+    <a href="https://youtu.be/0BxqcK0RMIM" alt="Head detections demo video" target="_blank">
         <img src="http://i3.ytimg.com/vi/0BxqcK0RMIM/hqdefault.jpg" height="276" width="377">
     </a>
-    <a href="https://youtu.be/pfJpM2gZx1M" alt="Upper-body detections demo video">
+    <a href="https://youtu.be/pfJpM2gZx1M" alt="Upper-body detections demo video" target="_blank">
         <img src="http://i3.ytimg.com/vi/pfJpM2gZx1M/hqdefault.jpg" height="276" width="377">
     </a>
 </div>
