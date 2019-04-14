@@ -21,15 +21,15 @@ Quick start
 ### Cloning the repository
 In order to download the models provided in this repository installation of [git](https://git-scm.com/) and [git-lfs](https://git-lfs.github.com/) is **mandatory**. To do so, run the following commands in command line interface:
 ```bash
-Install git: 	 
-	sudo apt-get install git
+Install git:     
+    sudo apt-get install git
 Install git-lfs:
-	sudo apt-get install git-lfs
+    sudo apt-get install git-lfs
 Set up git-lfs:
-	git lfs install
+    git lfs install
 Clone ssd_people from GitHub using the method of your choice: 
-	git clone https://github.com/AVAuco/ssd_people.git (HTTPS)
-	git clone git@github.com:AVAuco/ssd_people.git (SSH)
+    git clone https://github.com/AVAuco/ssd_people.git (HTTPS)
+    git clone git@github.com:AVAuco/ssd_people.git (SSH)
 ```
 
 You can verify the installation by checking that the file size of the files under the `models` directory is approximately 90 MB.
@@ -85,6 +85,17 @@ Additional, recommended requirements to run the detectors on the GPU:
 Performance
 ------
 Both the upper-body and head detectors have a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing real time detections.
+
+### Qualitative results
+We show some results of both the head (left) and upper-body detectors (right) on the [UCO-LAEO dataset](https://github.com/AVAuco/ucolaeodb) in the following videos:
+<div align="center">
+    <a href="https://youtu.be/0BxqcK0RMIM" alt="Head detections demo video">
+        <img src="http://i3.ytimg.com/vi/0BxqcK0RMIM/hqdefault.jpg" height="276" width="377">
+    </a>
+    <a href="https://youtu.be/pfJpM2gZx1M" alt="Upper-body detections demo video">
+        <img src="http://i3.ytimg.com/vi/pfJpM2gZx1M/hqdefault.jpg" height="276" width="377">
+    </a>
+</div>
 
 Citation
 ------
