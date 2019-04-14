@@ -84,7 +84,7 @@ Additional, recommended requirements to run the detectors on the GPU:
 
 Performance
 ------
-Both the upper-body and head detectors use a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing real time detections.
+Both the upper-body and head detectors have a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing real time detections.
 
 Citation
 ------
