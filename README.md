@@ -87,7 +87,7 @@ Performance
 Both the upper-body and head detectors have a 512x512 input size, favoring precision over speed. Nonetheless, these models run at an average of 35 Hz on a NVIDIA GTX 1080, allowing real time detections.
 
 ### Qualitative results
-We show some results of both the head (left) and upper-body detectors (right) on the [UCO-LAEO dataset](https://github.com/AVAuco/ucolaeodb) in the following videos:
+We show some results of both the head (left) and upper-body detectors (right) on the [UCO-LAEO dataset](https://github.com/AVAuco/ucolaeodb) in the following videos. No temporal smoothing or other kind of post-processing has been applied to the output of the detectors.
 <div align="center">
     <a href="https://youtu.be/tcAFehx7Am4" alt="Head detections demo video" target="_blank">
         <img src="http://i3.ytimg.com/vi/tcAFehx7Am4/hqdefault.jpg" height="276" width="377">
