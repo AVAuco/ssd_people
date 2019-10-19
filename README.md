@@ -7,6 +7,8 @@ SSD-based upper-body and head detectors
 
 By Pablo Medina-Suarez and Manuel J. Marin-Jimenez.
 
+**UPDATE: we have released a new [Keras+Tensorflow version](https://github.com/AVAuco/ssd_head_keras) of our head detector model, give it a try!**
+
 This repository contains two MatConvNet models for people detection in images: an upper-body detector, and a head detector. These models are based on the [Single Shot Multibox Detector (SSD)](https://arxiv.org/abs/1512.02325), as described in:
 
 ```
@@ -99,7 +101,7 @@ We show some results of both the head (left) and upper-body detectors (right) on
 
 Citation
 ------
-If you find useful these detectors, please, consider citing the following paper:
+If you find these models useful, please consider citing the following paper:
 ```
 @inproceedings{marin19cvpr,
   author    = {Mar\'in-Jim\'enez, Manuel J. and Kalogeiton, Vicky and Medina-Su\'arez, Pablo and and Zisserman, Andrew},
