@@ -34,7 +34,8 @@ Clone ssd_people from GitHub using the method of your choice:
     git clone git@github.com:AVAuco/ssd_people.git (SSH)
 ```
 
-You can verify the installation by checking that the file size of the files under the `models` directory is approximately 90 MB.
+You can verify the installation by checking that the file size of the files under the `models` directory is approximately 90 MB each.  
+Alternatively, you can use the following direct download link: [download](http://www.uco.es/~in1majim/research/files/people-models-mat.tgz)
 
 ### Running the demo code
 Demo code is provided in [ssd_people_demo.m](./ssd_people_demo.m). Running this script will perform detections over 3 sample images using the selected model, showing the results in screen.
